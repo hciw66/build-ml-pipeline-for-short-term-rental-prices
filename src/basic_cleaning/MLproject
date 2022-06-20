@@ -1,0 +1,36 @@
+name: basic_cleaning
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      input_artifact:
+        description: Fully-qualified name for the input artifact
+        type: string
+
+      min_price:
+        description: Minimum accepted price
+        type: float
+
+      max_price:
+        description: Maximum accepted price
+        type: float
+
+      artifact_name:
+        description: Name for the artifact
+        type: string
+
+      artifact_type:
+        description: Type for the artifact
+        type: string
+
+      artifact_description:
+        description: Description for the artifact
+        type: string
+
+    command: >-
+             python basic_cleaning.py  --input_artifact {input_artifact} \
+                                --min_price {min_price} --max_price {max_price} \
+                                --artifact_name {artifact_name} \
+                                --artifact_type {artifact_type} \
+                                --artifact_description {artifact_description}
