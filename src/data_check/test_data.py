@@ -65,10 +65,10 @@ def test_similar_neigh_distrib(data: pd.DataFrame, ref_data: pd.DataFrame, kl_th
 ########################################################
 def test_row_count(data: pd.DataFrame):
     """
-    Test if there are data
+    Test if the number of data is between 15000 and 1000000
     """
-    assert data.shape[0] > 0
-    
+    assert 15000 < data.shape[0] < 1000000
+
     
 def test_price_range(data: pd.DataFrame, max_price: float, min_price: float):
     """
