@@ -21,7 +21,7 @@ def test_column_names(data):
         "last_review",
         "reviews_per_month",
         "calculated_host_listings_count",
-        "availability_365",
+        "availability_365"
     ]
 
     these_columns = data.columns.values
@@ -74,6 +74,6 @@ def test_price_range(data: pd.DataFrame, max_price: float, min_price: float):
     """
     Test if all the price is between min and max price
     """
-    assert data['price'].between(min_price, max_price)
+    assert data['price'].between(min_price, max_price).all()
     
     

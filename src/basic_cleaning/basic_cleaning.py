@@ -32,7 +32,7 @@ def go(args):
     # Convert last_review to datetime
     df['last_review'] = pd.to_datetime(df['last_review'], errors='coerce')
     #save datafrme as a csv file
-    df.to_csv('clean_sample.csv')
+    df.to_csv('clean_sample.csv', index=False)
     # put process dato into wandb as artifact
     artifact_p = wandb.Artifact(name=args.artifact_name, 
                                         type=args.artifact_type,
