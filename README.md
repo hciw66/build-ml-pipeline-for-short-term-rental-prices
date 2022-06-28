@@ -566,6 +566,7 @@ you have trained your new model on the new data.
 
 ## github and wandb links
 https://github.com/hciw66/build-ml-pipeline-for-short-term-rental-prices
+
 https://wandb.ai/hciw66/nyc_airbnb/overview?workspace=user-hciw66
 
 ## License
